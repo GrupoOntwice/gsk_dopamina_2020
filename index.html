@@ -6,15 +6,24 @@
     <title>GSK - Dopamina</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
 
-
     <link rel="stylesheet" href="./styles/main.css">
+
+    <script src="https://kit.fontawesome.com/7ce00bbc69.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
+    <div class="logo">
+        <img src="./images/logo.png" alt="">
+    </div>    
+
     <header>
+        <div class="menuMobile closed">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times" style="display: none;"></i>
+        </div>
         <div class="menu">
             <a href="#saber" data-target='saber'>Lo que debes saber</a>
             <a href="#videos" data-target="videosIframe">Videos</a>
@@ -22,7 +31,12 @@
         </div>
     </header>
 
+    <div class="principalImage">
+        <img src="./images/head.png" alt="">
+    </div>
+
     <div class="container">
+
         <div class="titulosPrincipales">
             <div class="principalTitle">
                 El equilibrio de la red neuronal 
@@ -146,6 +160,31 @@
                 body.stop().animate({scrollTop:movement}, 500, 'swing', function() { 
                     console.log("mariossan")
                 });
+            })
+
+            // opciones de menu
+            $('.menuMobile').on('click', function(){
+                if ( $(this).hasClass('closed') ) {
+                    $('.menu').css('display', 'flex');
+                    $(this).removeClass('closed');
+                    $(this).addClass('opened');
+                    $('.fa-bars').hide()
+                    $('.fa-times').show()
+                } else {
+                    $('.menu').css('display', 'none');
+                    $(this).removeClass('opened');
+                    $(this).addClass('closed');
+                    $('.fa-bars').show()
+                    $('.fa-times').hide()
+                }
+            })
+
+            $('.menu a').on('click', function(){
+                $('.menu').css('display', 'none');
+                $('.menuMobile').removeClass('opened');
+                $('.menuMobile').addClass('closed');
+                $('.fa-bars').show()
+                $('.fa-times').hide()
             })
             
         })
