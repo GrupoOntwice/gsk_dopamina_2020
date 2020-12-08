@@ -175,7 +175,7 @@ header {
     text-transform: uppercase;
     font-weight: bold;
     font-family: "gilroybold";
-    text-shadow: 0px 0px 1px #48b7e2;
+    text-shadow: 1px 1px 3px #48b7e2
 }
 
 .titulosPrincipales .balance {
@@ -250,6 +250,12 @@ header {
     background: #000;
 }
 
+.videos .tvideo .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .videos .tvideo .tinfo {
     background: #5badb2;
     text-transform: uppercase;
@@ -274,13 +280,33 @@ header {
 
 .articulos .articulo {
     width: 90%;
-    max-width: 350px;
+    max-width: 400px;
     color: #fff;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-    margin: 4rem auto;
+    margin: 3rem auto;
+    
 }
+
+.articulos .title {
+    color: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.articulos .articulo .image {
+    width: 100%;
+    height: 200px;
+    background: #000;
+}
+.articulos .articulo .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
 
 footer {
     background: #5eb4bb;
@@ -303,8 +329,25 @@ footer {
     margin: auto;
     background: #000;
     margin: 3rem auto;
-    height: 300px;
+    height: 200px;
     position: relative;
+}
+
+.videoIframe iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.videoIframe video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.articulos a {
+    text-decoration: none;
 }
 
 @media only screen and (min-width: 900px) {
@@ -414,7 +457,9 @@ footer {
     }
 
     .videoIframe {
-        width: 50%;
+        width: 70%;
+        max-width: 600px;
+        height: 300px;
     }
 
     .videoIframe iframe {
@@ -428,7 +473,7 @@ footer {
     }
 
     .articulos .articulo {
-        margin: 10rem auto;
+        margin: 4rem auto;
     }
 
     .textFooter {
