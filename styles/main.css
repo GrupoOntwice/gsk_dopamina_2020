@@ -1,3 +1,97 @@
+@font-face {
+    font-family: 'gilroybold';
+    src: url('../fonts/radomir_tinkov_-_gilroy-bold-webfont.woff2') format('woff2'),
+         url('../fonts/radomir_tinkov_-_gilroy-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* @font-face {
+    font-family: 'gilroybold';
+    src: url('radomir_tinkov_-_gilroy-bold_2-webfont.woff2') format('woff2'),
+         url('radomir_tinkov_-_gilroy-bold_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} */
+
+@font-face {
+    font-family: 'gilroybold_italic';
+    src: url('../fonts/radomir_tinkov_-_gilroy-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/radomir_tinkov_-_gilroy-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('../fonts/radomir_tinkov_-_gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/radomir_tinkov_-_gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('../fonts/radomir_tinkov_-_gilroy-light-webfont.woff2') format('woff2'),
+         url('../fonts/radomir_tinkov_-_gilroy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'gilroymedium';
+    src: url('../fonts/radomir_tinkov_-_gilroy-medium-webfont.woff2') format('woff2'),
+         url('../fonts/radomir_tinkov_-_gilroy-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('../fonts/raleway-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'ralewayextrabold';
+    src: url('../fonts/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +99,7 @@
 }
 
 body {
-    background: url('../images/background.png') no-repeat top center; 
+    background: url('../images/background.jpg') no-repeat top center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -16,8 +110,7 @@ body {
     width: 95%;
     max-width: 1200px;
     margin: auto;
-    border: 1px solid #ccc;
-    margin-top: 25%;
+    margin-top: 19%;
 }
 
 .menu {
@@ -31,7 +124,8 @@ body {
 .menu a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #000;
+    color: #1a4c60;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .titulosPrincipales {
@@ -42,28 +136,258 @@ body {
 
 .titulosPrincipales .principalTitle {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: "gilroybold";
+    text-shadow: 1px 1px 1px #1a4c60;
 }
 
 .titulosPrincipales .subPrincipalTitle {
-    color: #000;
-    font-size: 1.3rem;
+    color: #0f2840;
+    font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: "gilroybold";
+    text-shadow: 0px 0px 1px #48b7e2;
+}
+
+.titulosPrincipales .balance {
+    border: 1px solid #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: auto;
+    margin-top: 10px;
+    padding: 4px;
+    font-family: "gilroymedium";
+}
+
+.titulosPrincipales img { 
+    width: 32px;
+    height: 14px;
+}
+
+.titulosPrincipales .text { 
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 1px #1a4c60;
+}
+
+.flecha {
+    margin-top: 10px;   
+}
+
+.saber {
+    margin-top: 4rem;
+}
+
+.tituloBlanco {
+    letter-spacing: 4px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.textBlanco {
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-size: 'Open Sans', sans-serif;
+}
+
+.videos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.videos .tvideo {
+    width: 100%;
+    padding: 1rem 3rem;
+}
+
+.videos .tvideo .image {
+    width: 100%;
+    height: 250px;
+    background: #000;
+}
+
+.videos .tvideo .tinfo {
+    background: #5badb2;
+    text-transform: uppercase;
+    font-family: "ralewaymedium";
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: 0.9rem;
+}
+
+.videos .tvideo .ttext {
+    background: #fff;
+    padding: 1rem;
+    font-size: 0.6rem;
+    text-align: center;
+    font-family: "ralewaylight";
+    line-height: 1.2rem;
+}
+
+.videosIframe {
+    margin: 1rem auto;
+}
+
+.articulos .articulo {
+    width: 90%;
+    max-width: 350px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    margin: 4rem auto;
+}
+
+footer {
+    background: #5eb4bb;
+    color: #193031;
+    padding: 2rem;
+}
+
+.textFooter {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7rem;
+}
+
+
+.videoIframe {
+    width: 90%;
+    margin: auto;
+    background: #000;
+    margin: 3rem auto;
+    height: 300px;
+    position: relative;
 }
 
 @media only screen and (min-width: 900px) {
+
+    body {
+        background: url('../images/background.jpg') no-repeat top center local; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .container {
+        margin-top: 25%;
+    }
+
     .menu {
-        width: 700px;
+        width: 100%;
+        max-width: 700px;
         margin: auto;
         margin-top: 3rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        
+        justify-content: space-between;   
     }
+
+    .titulosPrincipales .principalTitle {
+        font-size: 2.5rem;
+        /* text-shadow: initial; */
+    }
+
+    .titulosPrincipales .subPrincipalTitle {
+        font-size: 1.4rem;
+        /* text-shadow: initial; */
+    }
+
+    .titulosPrincipales .balance {
+        margin-top: 15px;
+        padding: 8px;
+    }
+    
+    .titulosPrincipales .text { 
+        font-size: 1.5rem;
+    }
+
+    .titulosPrincipales img { 
+        width: initial;
+        height: initial;
+    }
+
+    .saber {
+        margin-top: 16rem;
+    }
+
+    .tituloBlanco {
+        letter-spacing: 30px;
+        font-size: 2rem;
+    }
+
+    .textBlanco {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+    .videos {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .videos .tvideo {
+        width: 100px;
+        flex-grow: 1;
+        padding: 1rem;
+    }
+    
+    /* .videos .tvideo .image {
+        width: 100%;
+        height: 250px;
+        background: #000;
+    } */
+
+    .videosIframe {
+        margin: 10rem auto;
+    }
+
+    .videoIframe {
+        width: 50%;
+    }
+
+    .videoIframe iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: 0;
+        margin: 0;
+    }
+
+    .articulos .articulo {
+        margin: 10rem auto;
+    }
+
+    .textFooter {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    
 }

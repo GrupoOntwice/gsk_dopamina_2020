@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GSK - Dopamina</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
 
     <header>
         <div class="menu">
-            <a href="#">Lo que debes saber</a>
-            <a href="#">Videos</a>
-            <a href="#">Artículos de interés</a>
+            <a href="#saber" data-target='saber'>Lo que debes saber</a>
+            <a href="#videos" data-target="videosIframe">Videos</a>
+            <a href="#articulos" data-target="articulos">Artículos de interés</a>
         </div>
     </header>
 
@@ -26,7 +31,124 @@
             <div class="subPrincipalTitle">
                 Cognición - actividad dirigida - recompensa
             </div>
+
+            <div class="balance">
+                <img src="./images/cadena.png" alt="">
+                <div class="text">
+                    El balance de la energía
+                </div>
+            </div>
+            <div class="flecha" align='center'>
+                <img src="./images/flechas.png" alt="">
+            </div>
         </div>
+
+        <section class="saber">
+            <div class="tituloBlanco">
+                Lo que debe saber
+            </div>
+            <div class="textBlanco">
+                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit <br>nisi, pretium ut lacinia in, elementum id enim. Donec sollici
+            </div>
+
+            <div class="videos">
+                <div class="tvideo">
+                    <div class="image"></div>
+                    <div class="tinfo">Info 1</div>
+                    <div class="ttext">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, perspiciatis. Fugit non perspiciatis vel architecto impedit soluta dolores corrupti eum illo minus, odio ad.
+                    </div>
+                </div>
+                
+                <div class="tvideo">
+                    <div class="image"></div>
+                    <div class="tinfo">Info 2</div>
+                    <div class="ttext">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, perspiciatis. Fugit non perspiciatis vel architecto impedit soluta dolores corrupti eum illo minus, odio ad.
+                    </div>
+                </div>
+
+                <div class="tvideo">
+                    <div class="image"></div>
+                    <div class="tinfo">Info 3</div>
+                    <div class="ttext">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, perspiciatis. Fugit non perspiciatis vel architecto impedit soluta dolores corrupti eum illo minus, odio ad.
+                    </div>
+                </div>
+
+                <div class="tvideo">
+                    <div class="image"></div>
+                    <div class="tinfo">Info 4</div>
+                    <div class="ttext">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, perspiciatis. Fugit non perspiciatis vel architecto impedit soluta dolores corrupti eum illo minus, odio ad.
+                    </div>
+                </div>
+
+                <div class="tvideo">
+                    <div class="image"></div>
+                    <div class="tinfo">Info 5</div>
+                    <div class="ttext">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, perspiciatis. Fugit non perspiciatis vel architecto impedit soluta dolores corrupti eum illo minus, odio ad.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="videosIframe">
+            <div class="tituloBlanco">
+                Videos
+            </div>
+
+            <div class="videoIframe">
+                <iframe src="/ruta/iframne.php" frameborder="0"></iframe>
+            </div>
+
+            <div class="videoIframe">
+                <iframe src="/ruta/iframne.php" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <section class="articulos">
+            <div class="tituloBlanco">artículos <br>de interés</div>
+
+            <div class="articulo">
+                “Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabisl tempus convallis justo, lac
+            </div>
+
+            <div class="articulo">
+                “Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabisl tempus convallis justo, lac
+            </div>
+        </section>
     </div>
+
+    <footer>
+        <div class="textFooter">
+            Clave de Proyecto: PM-MX-BPR-WCNT-200001 Aviso No. Entrada: XXX <br>
+            Favor de reportar cualquier sospecha de reacción adversa o queja de producto al 800APOYAME (276-9263) y/o Farmacovigilancia.mx@gsk.com <br>
+            Para consultar la información para prescribir favor de dirigirse al sitio https://gskpro.com/es-mx <br>
+            También puede solicitarla al teléfono 800APOYAME (276-9263) o directamente al representante médico que lo visita. <br>
+            © 2020 grupo de compañías GlaxoSmithKline o su licenciatario. Todos los derechos reservados. GlaxoSmithKline, S. A de C.V,  <br>
+            Calzada México-Xochimilco N° 4900, Col. San Lorenzo Huipulco, CP. 14380, Tlalpan, Ciudad de México. <br>
+            Exclusivo para profesionales de la salud 
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $('.menu a').on("click", function(){
+                var body = $("html, body");
+
+                // calculo de donde se encuentra esa seccion
+                var clase = $(this).data("target");
+                var movement = $(`.${ clase }`).position().top                
+                body.stop().animate({scrollTop:movement}, 500, 'swing', function() { 
+                    console.log("mariossan")
+                });
+            })
+            
+        })
+    </script>
 </body>
 </html>
